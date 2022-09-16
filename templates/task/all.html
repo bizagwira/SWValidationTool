@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %} 
+
+<div class="jumbotron text-center">
+  <h1>Liste des étapes</h1>
+  <p>Toutes les étapes disponibles</p>
+</div>
+{% for task in tasks %}
+<div class="panel panel-default">
+  <div class="panel-heading">
+      <a href="{% url 'taskdelete' task.id %}" class="btn btn-xs btn-raised pull-right">
+          <i class="glyphicon glyphicon-trash" aria-hidden="true"> </i>
+      </a>
+      <a href="#" class="btn btn-xs btn-raised pull-right">
+          <i class="glyphicon glyphicon-pencil" aria-hidden="true"> </i>
+      </a>
+      <a href="#"><i aria-hidden="true">{{ task.description }} </i> </a>
+  </div>
+</div>
+{% endfor %}
+{% endblock content %}

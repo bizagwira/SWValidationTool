@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %} 
+<div class="container">
+  <h1>Éditer...</h1>
+  <form role="form" data-toggle="validator" action="{% url 'testupdate' test.id %}" method="post">
+    {% csrf_token %}    
+    <div class="form-group">
+      <label>Titre</label>
+      <input type="text" class="form-control" data-error="Veuillez entrer le titre du test!" id="title" placeholder="Entrer le titre du test..." name="title" value="{{ test.title }}" required>
+      <!-- Error -->
+      <div class="help-block with-errors"></div>
+    </div>
+   
+    <div class="form-group">
+      <label>Description</label>
+      <textarea class="form-control" data-error="Veuillez ajouter la description qui explique brièvement le test!" id="description"
+          placeholder="Ajouter la description du test..." name="description" required="">{{ test.description  }}</textarea>
+      <!-- Error -->
+      <div class="help-block with-errors"></div>
+    </div>
+
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary btn-block">Appliquer</button>
+    </div>
+    
+  </form>
+</div>   
+{% endblock content %}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tester et valider NAOSDK</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  </head>
+    <style type="text/css">
+      html,
+      body,
+      .container-table {
+        height: calc(100% - 50px);
+      }
+      /*Making a div in center*/
+
+      .container-table {
+        display: table;
+      }
+      .vertical-center-row {
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+    .mycard{
+      background: #fff;
+      border: 1px solid #ddd;
+      box-shadow: 1px 2px 3px #ccc;
+      padding: 10px;
+      margin-top: 100px;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar navbar-expand-sm">
+        <div class="navbar-header">
+        <a class="navbar-brand" href="/">Accueil</a>
+        </div>
+        <ul class="nav navbar-nav">
+        <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Étapes <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+        <li><a href="{% url 'addnewtask' %}">Créer une nouvel étape</a></li>
+        <li><a href="{% url 'showalltask' %}">Voir les étapes</a></li>
+        </ul>
+        </li>
+        </ul>
+      </div>
+      {% block content %}{% endblock content %}
+    </div>
+  <script type="text/javascript" src="{% static 'js/model.js' %}"></script>
+  </body>
+</html>

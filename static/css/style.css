@@ -1,0 +1,70 @@
+.example-parent {
+  border: 2px solid #DFA612;
+  color: black;
+  display: flex;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.example-origin {
+  flex-basis: 100%;
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.example-draggable {
+  background-color: #E5E4E2;
+  font-weight: normal;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.example-dropzone {
+  /*background-color: #6DB65B;*/
+  flex-basis: 100%;
+  flex-grow: 1;
+  padding: 10px;
+}
+
+#modules {
+  padding: 20px;
+  background: #eee;
+  margin-bottom: 20px;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+#dropzone {
+  padding: 20px;
+  min-height: 100px;
+  margin-bottom: 20px;
+  z-index: 0;
+  /*
+  background: #eee;
+  border-radius: 10px;*/
+}
+
+.active {
+  outline: 1px solid red;
+}
+
+.hover {
+  outline: 1px solid blue;
+}
+
+.drop-item {
+  cursor: pointer;
+  margin-bottom: 10px;
+  /*background-color: #DFA612;*/
+  padding: 5px 10px;
+  border-radius: 3px;
+  border: 1px solid rgb(204, 204, 204);
+  position: relative;
+}
+
+.drop-item .remove {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+}
